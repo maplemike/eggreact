@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.5.4",
     "firebase": "^2.2.7",
     "jquery": "^2.1.4",
     "react": "^0.13.3",
