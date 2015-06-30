@@ -1,25 +1,30 @@
 var React = require('react');
 var Router = require('react-router');
+var Repos = require('./GitHub/Repos');
+var UserProfile = require('./GitHub/UserProfile');
+var Notes = require('./Notes/Notes');
 
 var Profile = React.createClass({
+    mixins: [Router.State],
     getInitialState: function () {
         return {
-            notes: [],
-            bio: {},
-            repos: []
+            notes: ['note1', 'note2'],
+            bio: {name: 'Tyler'},
+            repos: [1,2,3]
         }
     },
     render: function () {
+        var username = this.getParams().username;
         return (
             <div className="row">
                 <div className="col-md-4">
-                    User Profile Component
+                    <UserProfile username={username} bio={this.state.bio} />
                 </div>
                 <div className="col-md-4">
-                    Repos component
+                    <Repos username={username} repos={this.state.repos} />
                 </div>
                 <div clasName="col-md-4">
-                    Notes component
+                    <Notes username={username} notes={this.state.notes} />
                 </div>
 
             </div>
