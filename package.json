@@ -12,6 +12,7 @@
     "axios": "^0.5.4",
     "firebase": "^2.2.7",
     "jquery": "^2.1.4",
+    "re-base": "0.0.11",
     "react": "^0.13.3",
     "react-router": "^0.13.3",
     "reactfire": "^0.4.0"
